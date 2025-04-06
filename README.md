@@ -89,4 +89,4 @@ These map to the following notebook sections:
 
 ## Acknowledgements
 
-This README exclusively reflects my work on Phi-3.5 implementation, synthetic dataset creation, and comparative model evaluations. However, this collaborative project involved contributions from multiple team members participating in the University of Cambridge 'Data Science with Machine Learning and AI' Career Accelerator. So I would like to thank the whole team for our work together on this project, as well as the Bank of England for the opportunity to undertake this project, and the Cambridge academic tutors for their guidance and support throughout.
+This README exclusively reflects my work on Phi-3.5 implementation, synthetic dataset creation, and comparative model evaluations. However, this collaborative project involved contributions from multiple team members participating in the University of Cambridge 'Data Science with Machine Learning and AI' Career Accelerator. So I would like to thank the whole team for our work together, as well as the Bank of England for the opportunity to undertake this project, and the Cambridge academic tutors for their guidance and support throughout.
