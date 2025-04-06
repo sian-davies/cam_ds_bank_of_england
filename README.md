@@ -30,14 +30,15 @@ My contributions focussed on:
 These map to the following notebook sections:
 
 ### Synthetic Dataset Creation (Sections 2.0 and 2.4.2.0.3)
-- Developed a synthetic dataset with predefined labels for sentiment, topic, and question evasion. This dataset provided a controlled benchmark for evaluating model performance.
+- Developed a synthetic dataset with predefined labels for sentiment, topic, and question evasion. This dataset provided a controlled benchmark for evaluating model performance. 
+- Run results from RoBERTa sentiment analysis and finBERT topic classification were sequentially added to a minimal QA version of this dataset for later comparison with Phi-3.5.
 
 ### Phi-3.5 Summarisation (Section 2.1, all subsections)
 - Deployed Phi-3.5 to generate concise summaries of transcript segments. 
 - Summarisation improved downstream input quality and performance for various NLP tasks, particularly topic classification and question evasion analysis.
 - Evaluation of summarised vs original data helped identify trade-offs such as loss of context and sentiment information due to over-summarisation, against the limitations of direct transcript processing including resource usage and reduced accuracy of topic classification.
 
-### Phi-3.5 for Synthetic Data Analysis (Sections 2.4.1, all subsections, and 2.4.2.1)
+### Phi-3.5 for Synthetic Data Analysis (Sections 2.4.1, all subsections; 2.4.2.1)
 - Applied Phi-3.5 to process the synthetic dataset for topic discovery, sentiment analysis and question evasion analysis.
 
 ### Comparative Analysis on Synthetic Data (Section 2.4.2.2)
@@ -63,25 +64,29 @@ These map to the following notebook sections:
 
 ## Insights for Future Pipeline Refinement
 - **Summarisation Trade-Offs:**  
-  Summarisation with Phi-3.5 tends to neutralise sentiment, leading to instances of misclassification. However, it improves performance of task-specific models for topic classification.
+    Summarisation with Phi-3.5 tends to neutralise sentiment, leading to instances of misclassification. However, it improves performance of task-specific models for topic classification.
   
 - **Scalability and Automation:**  
   The versatility of Phi-3.5 indicates its potential to automate preprocessing tasks (e.g., merging interruptions, filtering greetings), thereby enhancing pipeline scalability across varied transcript formats.
 
 
-## Notebook Structure
+## Repository Structure
 
-The overall structure of the notebook is as follows:
-- Business Context and Project Scenario
-- Setup: Libraries & Packages
-- 0 Exploration of Financial Metrics Data
-- 1 Data Collection and Pre-Processing of Transcripts
-- 2 Selecting Models and Scalability Assessment
-- 3 Analysis
-- 4 Conclusions
+```
+/notebook
+  ├── Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb
+/data
+  ├── Raw_Data/       # Raw PDF transcripts and financial metrics used for analysis
+  ├── Eval_Data/      # Synthetic evaluation datasets
+/reports
+  ├── findings/       # Summarised findings and insights
+  └── presentation/  # Slide deck for stakeholder presentation
 
-Each notebook section has detailed comments and code cells explaining the methodologies and findings.
+Cambridge_Bank_of_England_Project_Assignment_notebook.pdf    # PDF version of notebook
 
+README.md       # Indicates my code contributions to the project
+```
+  Note: The project notebook is too large to preview in GitHub, so a PDF version created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) is provided to showcase this project.
 
 ## Acknowledgements
 
