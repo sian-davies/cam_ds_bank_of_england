@@ -80,13 +80,12 @@ These map to the following notebook sections:
   ├── Eval_Data/      # Synthetic evaluation datasets
 /reports
   ├── findings/       # Summarised findings and insights
-  └── presentation/  # Slide deck for stakeholder presentation
+  └── presentation/   # Slide deck for stakeholder presentation
 
-Cambridge_Bank_of_England_Project_Assignment_notebook.pdf    # PDF version of notebook
-
-README.md       # Indicates my code contributions to the project
+- Cambridge_Bank_of_England_Project_Assignment_notebook.html     # Viewable version of notebook
+- README.md           # Describes project and my direct code contributions
 ```
-  Note: The project notebook is too large to preview in GitHub, so a PDF version created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) is provided to showcase this project.
+  Note: The project notebook is too large to preview in GitHub, so an HTML version created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) is provided to showcase this project.
 
 ## Acknowledgements
 
