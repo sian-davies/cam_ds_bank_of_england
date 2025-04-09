@@ -184,7 +184,7 @@ My contributions focussed on:
 ```
 Note: an HTML version was created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) to showcase this project in Github Pages.
 
-The notebook is too large to preview, please click the View in Colab button at the top to view.
+The notebook is too large to preview, please click the Open in Colab button at the top to view.
 
 ## Acknowledgements
 
