@@ -184,7 +184,7 @@ My contributions focussed on:
 ```
 Note: an HTML version was created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) to showcase this project in Github Pages.
 
-The notebook is too large to preview, please click the Open in Colab button at the top to view.
+The notebook is too large to preview, please click [Open in Colab](https://colab.research.google.com/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb) to view.
 
 ## Acknowledgements
 
