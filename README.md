@@ -47,87 +47,79 @@ My contributions focussed on:
     - 1.1.5 Output
     - 1.1.6 Checking the data
   - 1.2 Data Cleaning
-    - 1.2.0 Load data
-    - 1.2.1 Dealing with interruptions
-    - 1.2.2 Short texts
-    - 1.2.3 Hanging Q or A
-    - 1.2.4 Update uids
-    - 1.2.5 Clean and save data
-    - 1.2.6 Test on subset
   - 1.3 Initial Exploratory Data Analysis
     - 1.3.1 Transcripts overview
     - 1.3.2 1Q22 and 2Q24
     - 1.3.3 Emerging risks
 - 2 Selecting Models and Scalability Assessment
-  - 🟠 **2.0 Evaluation dataset**
+  - 🟠 **2.0 Evaluation dataset creation**
     - 2.0.1 Selecting ground truth
   - 🟠 **2.1 Phi 3.5 for summarisation**
-    - 🟠 **2.1.0 Initialise Phi-3.5**
+    - 🟠 **2.1.0 Phi-3.5 Initialisation**
     - 🟠 **2.1.1 Summarisation function**
-    - 🟠 **2.1.2 Generate summaries**
+    - 🟠 **2.1.2 Generate summarised text**
   - 2.2 Sentiment Analysis
-    - 2.2.0 Load dataset
-    - 2.2.1 Classification model
+    - 2.2.0 Load ground truth dataset
+    - 2.2.1 Sentiment model analyses
     - 2.2.2 Model comparison
     - 2.2.3 Run full dataset
   - 2.3 Topic Modelling
-    - 2.3.1 FinBERT
+    - 2.3.1 FinBERT classification
       - 2.3.1.0 Model setup
       - 2.3.1.1 Helper functions
-      - 2.3.1.2 Chunking options
-      - 2.3.1.3 Using summaries
+      - 2.3.1.2 Optimising chunking options
+      - 2.3.1.3 Using summarised text
       - 2.3.1.4 Comparison
     - 2.3.2 BERTopic
-      - Preprocessing
-      - Run on summaries
+      - 2.3.2.1 Preprocessing function
+      - 2.3.2.2 Run on summarised text
   - 2.4 QA Evasion & Generalisability
-    - 🟠 **2.4.1 Phi-3.5 Pipeline Initialization**
+    - 2.4.0 FinBERT classification for evasion 
+    - 🟠 **2.4.1 Phi-3.5 Pipeline Initialisation**
       - 🟠 **2.4.1.0 Preparing datasets for Phi 3.5**
       - 🟠 **2.4.1.1 Prompts**
-      - 🟠 **2.4.1.2 Function to run analyses with Phi-3.5**
+      - 🟠 **2.4.1.2 Functions to run analyses with Phi-3.5**
+      - 🟠 **2.4.1.3 Functions for accuracy plots**
     - 2.4.2 Synthetic dataset
-      - 🟠 **2.4.2.0.3 Create synthetic data table**
-      - Run RoBERTa
-      - Run FinBERT
-      - Create synthetic table
-    - 🟠 **2.4.2.1 Run Phi-3.5 on synthetic dataset**
-    - 🟠 **2.4.2.2 Compare results with other models**
-    - 2.4.3 Ground Truth dataset
-      - 🟠 **2.4.3.1 Prepare tables**
-      - 🟠 **2.4.3.2 Run Phi-3.5 on ground truth**
+      - 🟠 **2.4.2.0 Prepare synthetic data table**
+        - Run RoBERTa
+        - Run FinBERT
+        - Create combined synthetic data table
+      - 🟠 **2.4.2.1 Run Phi-3.5 on synthetic dataset**
+      - 🟠 **2.4.2.2 Compare results with other models**
+    - 🟠 **2.4.3 Ground Truth dataset**
+      - 🟠 **2.4.3.0 Prepare ground truth data tables**
+      - 🟠 **2.4.3.1 Run Phi-3.5 on ground truth**
+      - 🟠 **2.4.3.2 Model comparisons**
 - 3 Analysis
   - 3.0 Full dataset analysis
-    - 3.0.1 RoBERTa
+    - 3.0.1 RoBERTa seniment analysis
     - 🟠 **3.0.2 Phi-3.5 by quarter**
   - 3.1 22Q1
     - 3.1.1 Sentiment
-    - 3.1.2 Topic modelling (neg)
-      - BERTopic
-      - FinBERT
-        - Functions
-        - Plot distributions
+    - 3.1.2 Topic modelling (negative-sentiment texts)
+      - 3.1.2.1 BERTopic
+      - 3.1.2.2 FinBERT
     - 3.1.3 Evasion
-      - Evasive topic modelling
-        - BERTopic
-    - 3.1.4 Evasion + Negativity
-  - 3.2 Recent Two Quarters
-    - 3.2.0 Explore data
+      - 3.1.3.1 Topic modelling (evasive texts) - BERTopic
+    - 3.1.4 Evasion and Negativity
+  - 3.2 Recent Two Quarters (2Q24, 3Q24)
+    - 3.2.0 Data exploration
     - 3.2.1 Sentiment
-    - 3.2.2 Topic modelling (neg)
-      - BERTopic
-      - FinBERT
+    - 3.2.2 Topic modelling (negative-sentiment texts)
+      - 3.2.2.1 BERTopic
+      - 3.2.2.2 FinBERT
     - 3.2.3 Evasion
-      - Evasive topic modelling
-        - BERTopic
-    - 3.2.4 Evasion + Negativity
-    - 🟠 **3.2.5 Regulatory keywords**
+      - 3.2.3.1 Topic modelling (evasive texts) - BERTopic
+    - 3.2.4 Evasion and Negativity
+    - 🟠 **3.2.5 Regulatory keywords detection**
 - 4 Conclusions
 
 </details>
 
 
 - ### Synthetic Dataset Creation 
-  *Sections 2.0 and 2.4.2.0.3*
+  *Sections 2.0 and 2.4.2.0*
   - Developed a synthetic dataset with predefined labels for sentiment, topic, and question evasion. This dataset provided a controlled benchmark for evaluating model performance. 
   - Run results from RoBERTa sentiment analysis and finBERT topic classification were sequentially added to a minimal QA version of this dataset for later comparison with Phi-3.5.
 
