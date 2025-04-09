@@ -77,7 +77,7 @@ These map to the following notebook sections:
   ├── Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb
 /data
   ├── Raw_Data/       # Raw PDF transcripts and financial metrics used for analysis
-  ├── Eval_Data/      # Synthetic evaluation datasets
+  ├── Processed_Data/ # Evaluation datasets (once generated, critical files including summarised text are saved here)
 /reports
   ├── findings/       # Summarised findings and insights
   └── presentation/   # Slide deck for stakeholder presentation
