@@ -79,7 +79,7 @@ My contributions focussed on:
       - 🟠 **2.4.1.0 Preparing datasets for Phi 3.5**
       - 🟠 **2.4.1.1 Prompts**
       - 🟠 **2.4.1.2 Functions to run analyses with Phi-3.5**
-      - 🟠 **2.4.1.3 Functions for accuracy plots** --------------------
+      - 🟠 **2.4.1.3 Functions for accuracy plots**
     - 2.4.2 Synthetic dataset
       - 🟠 **2.4.2.0 Prepare synthetic data table**
         - Run RoBERTa
