@@ -1,5 +1,5 @@
 # Cambridge Bank of England Team Project Assignment   
-[![View in nbviewer](https://img.shields.io/badge/View%20Notebook%20in-nbviewer-orange)](https://nbviewer.org/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)     [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)   
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)   
 
 ## Collaborative Earnings Call Transcript Analysis
 
@@ -182,12 +182,9 @@ My contributions focussed on:
   └── presentation/   # Slide deck for stakeholder presentation
 - README.md           # Describes project and my direct code contributions
 ```
-
 Note: an HTML version was created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) to showcase this project in Github Pages.
 
-The project notebook is too large to preview in GitHub:
-  👉 [Click here to view the notebook in nbviewer](https://nbviewer.org/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)
-
+The notebook is too large to preview, please click the View in Colab button at the top to view.
 
 ## Acknowledgements
 
