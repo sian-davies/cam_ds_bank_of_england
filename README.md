@@ -1,5 +1,5 @@
-# Cambridge Bank of England Team Project Assignment          [![View in nbviewer](https://img.shields.io/badge/View%20Notebook%20in-nbviewer-orange)](https://nbviewer.org/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)
-
+# Cambridge Bank of England Team Project Assignment   
+[![View in nbviewer](https://img.shields.io/badge/View%20Notebook%20in-nbviewer-orange)](https://nbviewer.org/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)     [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)   
 
 ## Collaborative Earnings Call Transcript Analysis
 
@@ -28,39 +28,144 @@ My contributions focussed on:
 - Conducting comparative performance evaluations with accuracy plots.
 - Implementing regulatory keyword detection and full-scale analysis from selected financial quarters.
 
-These map to the following notebook sections:
 
-### Synthetic Dataset Creation (Sections 2.0 and 2.4.2.0.3)
-- Developed a synthetic dataset with predefined labels for sentiment, topic, and question evasion. This dataset provided a controlled benchmark for evaluating model performance. 
-- Run results from RoBERTa sentiment analysis and finBERT topic classification were sequentially added to a minimal QA version of this dataset for later comparison with Phi-3.5.
+<details>
+<summary><strong>📘 Click to expand notebook outline</strong></summary>
 
-### Phi-3.5 Summarisation (Section 2.1, all subsections)
-- Deployed Phi-3.5 to generate concise summaries of transcript segments. 
-- Summarisation improved downstream input quality and performance for various NLP tasks, particularly topic classification and question evasion analysis.
-- Evaluation of summarised vs original data helped identify trade-offs such as loss of context and sentiment information due to over-summarisation, against the limitations of direct transcript processing including resource usage and reduced accuracy of topic classification.
+## 📘 Notebook Outline
 
-### Phi-3.5 for Synthetic Data Analysis (Sections 2.4.1, all subsections; 2.4.2.1)
-- Applied Phi-3.5 to process the synthetic dataset for topic discovery, sentiment analysis and question evasion analysis.
+- Business Context and Project Scenario
+- Setup: Libraries & Packages
+- 0 Exploration of Financial Metrics Data
+- 1 Data Collection and Pre-Processing of Transcripts
+  - 1.1 Extract information from transcripts
+    - 1.1.0 Helper functions
+    - 1.1.1 Unzip files
+    - 1.1.2 PDF-to-table converter
+    - 1.1.3 Batch-process PDF files
+    - 1.1.4 Convert PDFs to CSV
+    - 1.1.5 Output
+    - 1.1.6 Checking the data
+  - 1.2 Data Cleaning
+    - 1.2.0 Load data
+    - 1.2.1 Dealing with interruptions
+    - 1.2.2 Short texts
+    - 1.2.3 Hanging Q or A
+    - 1.2.4 Update uids
+    - 1.2.5 Clean and save data
+    - 1.2.6 Test on subset
+  - 1.3 Initial Exploratory Data Analysis
+    - 1.3.1 Transcripts overview
+    - 1.3.2 1Q22 and 2Q24
+    - 1.3.3 Emerging risks
+- 2 Selecting Models and Scalability Assessment
+  - 🟠 **2.0 Evaluation dataset**
+    - 2.0.1 Selecting ground truth
+  - 🟠 **2.1 Phi 3.5 for summarisation**
+    - 🟠 **2.1.0 Initialise Phi-3.5**
+    - 🟠 **2.1.1 Summarisation function**
+    - 🟠 **2.1.2 Generate summaries**
+  - 2.2 Sentiment Analysis
+    - 2.2.0 Load dataset
+    - 2.2.1 Classification model
+    - 2.2.2 Model comparison
+    - 2.2.3 Run full dataset
+  - 2.3 Topic Modelling
+    - 2.3.1 FinBERT
+      - 2.3.1.0 Model setup
+      - 2.3.1.1 Helper functions
+      - 2.3.1.2 Chunking options
+      - 2.3.1.3 Using summaries
+      - 2.3.1.4 Comparison
+    - 2.3.2 BERTopic
+      - Preprocessing
+      - Run on summaries
+  - 2.4 QA Evasion & Generalisability
+    - 🟠 **2.4.1 Phi-3.5 Pipeline Initialization**
+      - 🟠 **2.4.1.0 Preparing datasets for Phi 3.5**
+      - 🟠 **2.4.1.1 Prompts**
+      - 🟠 **2.4.1.2 Function to run analyses with Phi-3.5**
+    - 2.4.2 Synthetic dataset
+      - 🟠 **2.4.2.0.3 Create synthetic data table**
+      - Run RoBERTa
+      - Run FinBERT
+      - Create synthetic table
+    - 🟠 **2.4.2.1 Run Phi-3.5 on synthetic dataset**
+    - 🟠 **2.4.2.2 Compare results with other models**
+    - 2.4.3 Ground Truth dataset
+      - 🟠 **2.4.3.1 Prepare tables**
+      - 🟠 **2.4.3.2 Run Phi-3.5 on ground truth**
+- 3 Analysis
+  - 3.0 Full dataset analysis
+    - 3.0.1 RoBERTa
+    - 🟠 **3.0.2 Phi-3.5 by quarter**
+  - 3.1 22Q1
+    - 3.1.1 Sentiment
+    - 3.1.2 Topic modelling (neg)
+      - BERTopic
+      - FinBERT
+        - Functions
+        - Plot distributions
+    - 3.1.3 Evasion
+      - Evasive topic modelling
+        - BERTopic
+    - 3.1.4 Evasion + Negativity
+  - 3.2 Recent Two Quarters
+    - 3.2.0 Explore data
+    - 3.2.1 Sentiment
+    - 3.2.2 Topic modelling (neg)
+      - BERTopic
+      - FinBERT
+    - 3.2.3 Evasion
+      - Evasive topic modelling
+        - BERTopic
+    - 3.2.4 Evasion + Negativity
+    - 🟠 **3.2.5 Regulatory keywords**
+- 4 Conclusions
 
-### Comparative Analysis on Synthetic Data (Section 2.4.2.2)
-- Generated accuracy plots to compare Phi-3.5 with other models on the synthetic dataset across topic classification, sentiment, and question evasion tasks. 
-- Phi-3.5 performed well for sentiment accuracy but was outperformed by specialised NLP models. However, Phi-3.5 showed improved detection of question evasion in transcript segments.
+</details>
 
-### Phi-3.5 for Ground Truth Analysis (Section 2.4.3.1)
-- Processed ground truth data using Phi-3.5 to assess real-world performance. This dataset provided a benchmark for evaluating real-world data performance.
 
-### Comparative Analysis on Ground Truth Data (Section 2.4.3.2)
-- Generated accuracy plots to compare Phi-3.5 with other models on the ground truth dataset across topic classification, sentiment, and question evasion tasks.
-- Real-world data gave lower accuracy results across all models compared to the synthetic dataset, highlighting the difficulty inherent in this task from linguistic nuance.
-- Phi-3.5 gave improved performance for question evasion detection and comparable performance for topic classification compared to task-specific models.
+- ### Synthetic Dataset Creation 
+  *Sections 2.0 and 2.4.2.0.3*
+  - Developed a synthetic dataset with predefined labels for sentiment, topic, and question evasion. This dataset provided a controlled benchmark for evaluating model performance. 
+  - Run results from RoBERTa sentiment analysis and finBERT topic classification were sequentially added to a minimal QA version of this dataset for later comparison with Phi-3.5.
 
-### Phi-3.5 on Full Financial Quarter Data (Section 3.0.2)
-- Applied Phi-3.5 to all identified transcript data from key financial quarters (as determined by Exploratory Data Analysis).
-- This analysis focused on extracting topics and question evasion insights reflective of financial health and risk indicators.
+- ### Phi-3.5 Summarisation
+  *Section 2.1, all subsections*
+  - Deployed Phi-3.5 to generate concise summaries of transcript segments. 
+  - Summarisation improved downstream input quality and performance for various NLP tasks, particularly topic classification and question evasion analysis.
+  - Evaluation of summarised vs original data helped identify trade-offs such as loss of context and sentiment information due to over-summarisation, against the limitations of direct transcript processing including resource usage and reduced accuracy of topic classification.
 
-### Regulatory Keyword Detection (Section 3.2.5)
-- Implemented detection and analysis for regulatory keywords to flag discussions with potential regulatory impact (e.g., Basel III).
-- This analysis supported identifying discussions with potential regulatory implications.
+- ### Phi-3.5 for Synthetic Data Analysis
+  *Sections 2.4.1, all subsections; 2.4.2.1*
+  - Applied Phi-3.5 to process the synthetic dataset for topic discovery, sentiment analysis and question evasion analysis.
+
+- ### Comparative Analysis on Synthetic Data
+  *Section 2.4.2.2*
+  - Generated accuracy plots to compare Phi-3.5 with other models on the synthetic dataset across topic classification, sentiment, and question evasion tasks. 
+  - Phi-3.5 performed well for sentiment accuracy but was outperformed by specialised NLP models. However, Phi-3.5 showed improved detection of question evasion in transcript segments.
+
+- ### Phi-3.5 for Ground Truth Analysis
+  *Section 2.4.3.1*
+  - Processed ground truth data using Phi-3.5 to assess real-world performance. This dataset provided a benchmark for evaluating real-world data performance.
+
+- ### Comparative Analysis on Ground Truth Data
+  *Section 2.4.3.2*
+  - Generated accuracy plots to compare Phi-3.5 with other models on the ground truth dataset across topic classification, sentiment, and question evasion tasks.
+  - Real-world data gave lower accuracy results across all models compared to the synthetic dataset, highlighting the difficulty inherent in this task from linguistic nuance.
+  - Phi-3.5 gave improved performance for question evasion detection and comparable performance for topic classification compared to task-specific models.
+
+- ### Phi-3.5 on Full Financial Quarter Data
+  *Section 3.0.2*
+  - Applied Phi-3.5 to all identified transcript data from key financial quarters (as determined by Exploratory Data Analysis).
+  - This analysis focused on extracting topics and question evasion insights reflective of financial health and risk indicators.
+
+- ### Regulatory Keyword Detection
+  *Section 3.2.5*
+  - Implemented detection and analysis for regulatory keywords to flag discussions with potential regulatory impact (e.g., Basel III).
+  - This analysis supported identifying discussions with potential regulatory implications.
+
 
 
 ## Insights for Future Pipeline Refinement
@@ -79,14 +184,16 @@ These map to the following notebook sections:
 /data
   ├── Raw_Data/       # Raw PDF transcripts and financial metrics used for analysis
   ├── Processed_Data/ # Evaluation datasets (critical files saved here during run)
+/docs                 # HTML version of Colab for Github Pages
 /reports
   ├── findings/       # Summarised findings and insights
   └── presentation/   # Slide deck for stakeholder presentation
-/docs                 # HTML version of Colab for Github Pages
 - README.md           # Describes project and my direct code contributions
 ```
-  Note: The project notebook is too large to preview in GitHub, an HTML version was created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) to showcase this project in Github Pages.
 
+Note: an HTML version was created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) to showcase this project in Github Pages.
+
+The project notebook is too large to preview in GitHub:
   👉 [Click here to view the notebook in nbviewer](https://nbviewer.org/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)
 
 
