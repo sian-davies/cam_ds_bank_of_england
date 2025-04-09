@@ -1,4 +1,5 @@
-# Cambridge Bank of England Team Project Assignment
+# Cambridge Bank of England Team Project Assignment          [![View in nbviewer](https://img.shields.io/badge/View%20Notebook%20in-nbviewer-orange)](https://nbviewer.org/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)
+
 
 ## Collaborative Earnings Call Transcript Analysis
 
@@ -77,15 +78,17 @@ These map to the following notebook sections:
   ├── Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb
 /data
   ├── Raw_Data/       # Raw PDF transcripts and financial metrics used for analysis
-  ├── Processed_Data/ # Evaluation datasets (once generated, critical files including summarised text are saved here)
+  ├── Processed_Data/ # Evaluation datasets (critical files saved here during run)
 /reports
   ├── findings/       # Summarised findings and insights
   └── presentation/   # Slide deck for stakeholder presentation
-
-- Cambridge_Bank_of_England_Project_Assignment_notebook.html     # Viewable version of notebook
+/docs                 # HTML version of Colab for Github Pages
 - README.md           # Describes project and my direct code contributions
 ```
-  Note: The project notebook is too large to preview in GitHub, so an HTML version created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) is provided to showcase this project.
+  Note: The project notebook is too large to preview in GitHub, an HTML version was created with [jupyter nbconvert](https://github.com/jupyter/nbconvert) to showcase this project in Github Pages.
+
+  👉 [Click here to view the notebook in nbviewer](https://nbviewer.org/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)
+
 
 ## Acknowledgements
 
