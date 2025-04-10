@@ -1,9 +1,9 @@
-# Cambridge Bank of England Team Project Assignment   
+# LLM-Powered NLP Analysis of Financial Transcripts for Risk & Regulatory Insights
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sian-davies/cam_ds_bank_of_england/blob/main/notebook/Cambridge_Bank_of_England_Project_Assignment_notebook.ipynb)   
 
-## Collaborative Earnings Call Transcript Analysis
+***Developed as part of the Cambridge Data Science Programme in collaboration with the Bank of England.***
 
-This repository contains a collaborative piece of work on leveraging Natural Language Processing (NLP) techniques to extract actionable insights from earnings call transcripts, specifically to support the Prudential Regulation Authority’s oversight of G-SIBs. The project evaluates various NLP models for tasks such as sentiment analysis, topic discovery, and question evasion detection.
+This repository contains a collaborative piece of work on leveraging Natural Language Processing (NLP) techniques to extract actionable insights from earnings call transcripts, specifically to support the Prudential Regulation Authority’s oversight of global systemically important banks (G-SIBs). The project evaluates various NLP models for tasks such as sentiment analysis, topic discovery, and question evasion detection.
 
 > **Note:** This repository includes work from multiple project team members. This README highlights the sections where I contributed directly: using the open-source large language model **Phi-3.5**, synthetic dataset creation, and comparative model evaluation.
 
